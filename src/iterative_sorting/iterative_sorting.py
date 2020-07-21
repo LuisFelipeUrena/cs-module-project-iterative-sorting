@@ -10,12 +10,15 @@ def selection_sort(arr):
         # TO-DO: find next smallest element
         # (hint, can do in 3 loc)
         # Your code here
-        if arr[smallest_index] < arr[smallest_index + 1]:
-            arr[smallest_index] , arr[smallest_index + 1] = arr[smallest_index + 1] , arr[smallest_index]
-
+        # if arr[smallest_index] < arr[smallest_index + 1]:
+        #     arr[smallest_index] , arr[smallest_index + 1] = arr[smallest_index + 1] , arr[smallest_index]
+        for j in range(smallest_index + 1 , len(arr)):
+            if arr[smallest_index] > arr[j]:
+                smallest_index = j
 
         # TO-DO: swap
         # Your code here
+        arr[i] , arr[smallest_index] = arr[smallest_index] , arr[i]    
 
     return arr
 
